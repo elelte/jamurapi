@@ -22,3 +22,12 @@ $router->get('/key', function () use ($router) {
 $router->get('/product/{id}', function ($id){
     return $id;
 });
+
+/**
+ * Routes for resource todo
+ */
+$router->get('todo', 'TodosController@all');
+$router->get('todo/{id}', 'TodosController@get');
+$router->post('todo', 'TodosController@add');
+$router->put('todo/{id}', 'TodosController@put');
+$router->delete('todo/{id}', 'TodosController@remove');
